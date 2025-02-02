@@ -120,7 +120,7 @@ def main_menu():
     elif sel_option["main menu"] == "Filter":
         filter_menu()
     elif sel_option["main menu"] == "Exit":
-        print("EXIT!")
+        console.print("[pink]Bye bye!!")
         return "ext"
 
 
