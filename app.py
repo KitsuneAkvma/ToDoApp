@@ -2,10 +2,10 @@ import traceback
 
 from models import ToDoList
 from rich.console import Console
-
+from utils.file_handler import load_file
 
 console = Console()
-todo_list = ToDoList.ToDoList()
+todo_list = ToDoList.ToDoList(load_file())
 
 if __name__ == "__main__":
     try:
@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
         while True:
             reset_view()
-
             sel_option = main_menu()
             if sel_option == "ext":
                 console.print("[pink]Bye bye!!")

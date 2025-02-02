@@ -1,10 +1,9 @@
 from models.Task import Task
-from utils.file_handler import save_file, load_file
 
 
 class ToDoList:
-    def __init__(self):
-        self.todo_list = load_file()
+    def __init__(self, list_data=[]):
+        self.todo_list = list_data
         self.default_sort_options = {
             "sort_by": "",
             "Show": "",
@@ -14,18 +13,17 @@ class ToDoList:
         self.sorted_list = self.get_sorted_list()
 
     def get_list(self):
-        return self.todo_list
+        return [task.to_dict() for task in self.todo_list]
 
     def get_sorted_list(self):
         sorted_list = self.todo_list[:]
-        print("current sort options: ", self.current_sort_options)
 
         if self.current_sort_options["sort_by"] == "ID":
             sorted_list.sort(key=lambda task: task.id)
         elif self.current_sort_options["sort_by"] == "Title":
             sorted_list.sort(key=lambda task: task.title)
         elif self.current_sort_options["sort_by"] == "Due to":
-            sorted_list.sort(key=lambda task: task.due_date)
+            sorted_list.sort(key=lambda task: task.due_to)
 
         if type(self.current_sort_options["Show"]) is type(True):
             state = self.current_sort_options["Show"]
@@ -47,18 +45,16 @@ class ToDoList:
     def get_task(self, task_nr):
         tasks_list = self.get_list()
         for task in tasks_list:
-            if task.id == task_nr:
+            if task["id"] == task_nr:
                 return task
         return {}
 
     def add_item(self, item_data):
         todo_item = Task(item_data)
         self.todo_list.append(todo_item)
-        save_file(self.todo_list)
 
     def del_item(self, sel_item):
         self.todo_list.remove(sel_item)
-        save_file(self.get_list())
 
     def sort_by_id(self):
         self.current_sort_options["sort_by"] = "ID"
@@ -83,3 +79,6 @@ class ToDoList:
 
     def __iter__(self):
         return iter(self.todo_list)
+
+    def __repr__(self):
+        return self.get_list()

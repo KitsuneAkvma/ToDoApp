@@ -151,6 +151,7 @@ def add_menu():
     new_item.update(**inquirer.prompt(questions))
     console.print(f"[green]{new_item}")
     todo_list.add_item(new_item)
+    save_file(todo_list)
 
 
 def select_menu():
@@ -215,6 +216,7 @@ def select_menu():
 
             if a_y_s_answer["are you sure?"] is True:
                 todo_list.del_item(selected_task)
+                save_file(todo_list)
             else:
                 pass
 
