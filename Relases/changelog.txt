@@ -1,0 +1,21 @@
+0.1:
+- Basic functions:
+    - Showing tasks
+    - Adding new task
+    - Editing task
+    - Changing task status
+    - Deleting task
+    - Validating input data (integer, date format, non-empty value)
+    - Saving and loading tasks from JSON file
+    - Displaying task details
+    - Main menu with options to add, select, or exit
+    - Handling exceptions and errors
+
+0.2:
+- Refactored code into modules
+- Fixed poor coding practices
+- Added sorting by id, title, and date
+- Added filtering tasks by categories and state (done, not done, any)
+- Changed table view to a more minimalistic style
+- Categories now have emojis and only emojis are shown in the corresponding table column
+- Planned to implement pytest tests

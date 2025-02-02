@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "test",
+        "desc": "testerowy opis testowania testu",
+        "due_to": "12-02-2025",
+        "categories": [
+            "work",
+            "dev"
+        ],
+        "is_done": false,
+        "created_at": "2025-02-01T02:39:19.046967"
+    },
+    {
+        "id": 2,
+        "title": "zakupy and mleko",
+        "desc": "kup mleko, mleko, MLEKO, wode i miecz energetyczny (stary na parapecie we\u017a paragon)",
+        "due_to": "26-02-2025",
+        "categories": [
+            "personal",
+            "cat",
+            "war",
+            "milk"
+        ],
+        "is_done": false,
+        "created_at": "2025-02-01T02:39:19.046967"
+    },
+    {
+        "id": 3,
+        "title": "Raport",
+        "desc": "Stworzy\u0107 raport z wynik\u00f3w produkcji",
+        "due_to": "15-03-2025",
+        "categories": [
+            "work",
+            "raport"
+        ],
+        "is_done": true,
+        "created_at": "2025-02-01T02:39:19.046967"
+    },
+    {
+        "id": 4,
+        "title": "DELETE THIS TASK",
+        "desc": "Death penality task TESTING EDITING",
+        "due_to": "23-07-2026",
+        "categories": [
+            "death",
+            "test",
+            "edit"
+        ],
+        "is_done": true,
+        "created_at": "2025-02-01T02:39:19.046967"
+    },
+    {
+        "id": 5,
+        "title": "Buy a new mic",
+        "desc": "Thinking about a RODE form last year",
+        "due_to": "15-12-2025",
+        "categories": [
+            "personal",
+            "shopping"
+        ],
+        "is_done": false,
+        "created_at": "2025-02-01T02:39:19.046967"
+    }
+]
