@@ -38,6 +38,9 @@ class Task:
         )
 
     def get_object(self):
+        return self
+
+    def get_dict(self):
         return {
             "id": self.id,
             "title": self.title,

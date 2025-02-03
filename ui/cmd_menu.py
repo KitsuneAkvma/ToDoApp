@@ -82,14 +82,19 @@ def main_view():
 
 def task_view(item_data):
     os.system("cls")
-    console.rule(f"{item_data.title} #{item_data.id}")
+    console.rule(f"{item_data['title']} #{item_data['id']}")
     console.print(
-        f"[italic grey50] Due to: {item_data.due_to} {'✔️' if item_data.is_done else '❌'}"
+        f"[italic grey50] Due to: {item_data['due_to']} {'✔️' if item_data['is_done'] else '❌'}"
     )
-    console.print("\n[bold]Description:", justify="center")
-    console.print(f"\n[grey89]{item_data.desc}", justify="center")
-    for category in item_data.categories:
-        console.print(f"[white on dark_green]{category}[/white on dark_green] ", end="")
+    console.print("\n[bold]Description: ", justify="center")
+    console.print(f"\n[grey89]{item_data['desc']}", justify="center")
+    console.print("\n")
+    for category in item_data["categories"]:
+        console.print(
+            f"[white on dark_green]{category}[/white on dark_green] ",
+            end="",
+            justify="center",
+        )
     console.print("\n", justify="center")
 
 
@@ -156,11 +161,8 @@ def add_menu():
 
 def select_menu():
 
-    selected_task = {}
-
-    def edit_menu():
-        selected_task_data = selected_task.get_object()
-        console.print("\n")
+    def edit_menu(selected_task):
+        selected_task_instance = todo_list.get_task(selected_task["id"])
         select_options = [
             inquirer.List(
                 "select option",
@@ -174,27 +176,27 @@ def select_menu():
                 inquirer.Text(
                     "title",
                     message="Select a title",
-                    default=selected_task_data["title"],
+                    default=selected_task_instance["title"],
                 ),
                 inquirer.Text(
                     "desc",
                     message="Write the description",
-                    default=selected_task_data["desc"],
+                    default=selected_task_instance["desc"],
                 ),
                 inquirer.Text(
                     "due_to",
                     message="Select new date (DD-MM-YYYY)",
-                    default=selected_task_data["due_to"],
+                    default=selected_task_instance["due_to"],
                 ),
                 inquirer.Text(
                     "categories",
                     message="Select categories",
-                    default=", ".join(selected_task_data["categories"]),
+                    default=", ".join(selected_task_instance["categories"]),
                 ),
             ]
             edited_values = inquirer.prompt(edit_menu_input)
 
-            edited_task = selected_task_data
+            edited_task = selected_task_instance
             edited_task["title"] = edited_values["title"]
             edited_task["desc"] = edited_values["desc"]
             edited_task["due_to"] = edited_values["due_to"]
@@ -230,6 +232,8 @@ def select_menu():
         edit_menu(todo_list)
     else:
         task_nr = int(inquirer.prompt([task_nr_input])["task_nr"])
+        selected_task_index = todo_list.get_task_index(task_nr)
+        selected_task_obj = todo_list.todo_list[selected_task_index]
         selected_task = todo_list.get_task(task_nr)
         if selected_task == {}:
             console.print("[red]Task with provided ID does not exist.")
@@ -237,7 +241,7 @@ def select_menu():
             return
     if selected_task:
         task_view(selected_task)
-        edit_menu()
+        edit_menu(selected_task_obj)
     else:
         console.print("[red]Task with provided ID does not exist.")
 

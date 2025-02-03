@@ -161,3 +161,4 @@ cython_debug/
 
 .flake8
 toDoData.json
+Relases/

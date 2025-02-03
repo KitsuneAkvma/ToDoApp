@@ -7,9 +7,10 @@ from utils.file_handler import load_file
 console = Console()
 todo_list = ToDoList.ToDoList(load_file())
 
+
 if __name__ == "__main__":
     try:
-        from ui.Menu import main_menu, reset_view
+        from ui.cmd_menu import main_menu, reset_view
 
         while True:
             reset_view()

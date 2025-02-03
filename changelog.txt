@@ -18,4 +18,4 @@
 - Added filtering tasks by categories and state (done, not done, any)
 - Changed table view to a more minimalistic style
 - Categories now have emojis and only emojis are shown in the corresponding table column
-- Planned to implement pytest tests
+- Created tests for Models and file handling

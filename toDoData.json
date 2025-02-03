@@ -4,89 +4,119 @@
         "title": "Call with supplier",
         "desc": "Discuss shipment details",
         "due_to": "08-02-2025",
-        "categories": ["💼 work", "📦 logistics"],
+        "categories": [
+            "\ud83d\udcbc work",
+            "\ud83d\udce6 logistics"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T19:55:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 2,
         "title": "Weekly planning",
         "desc": "Prepare weekly plan for upcoming tasks",
         "due_to": "03-02-2025",
-        "categories": ["💼 work", "🚀 productivity"],
-        "is_done": false,
-        "created_at": "2025-02-02T19:40:00.000000"
+        "categories": [
+            "\ud83d\udcbc work",
+            "\ud83d\ude80 productivity"
+        ],
+        "is_done": true,
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 3,
         "title": "Write blog post",
         "desc": "Prepare an article about AI trends in 2025",
         "due_to": "10-03-2025",
-        "categories": ["🏡 personal", "✍️ writing"],
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\u270d\ufe0f writing"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T16:50:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 4,
         "title": "Code review",
         "desc": "Review PR for feature X",
         "due_to": "07-02-2025",
-        "categories": ["💼 work", "🔍 review"],
+        "categories": [
+            "\ud83d\udcbc work",
+            "\ud83d\udd0d review"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T17:05:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 5,
         "title": "Exercise",
         "desc": "Run 5km in the park",
         "due_to": "05-02-2025",
-        "categories": ["🏡 personal", "❤️ health"],
-        "is_done": false,
-        "created_at": "2025-02-02T19:15:00.000000"
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\u2764\ufe0f health"
+        ],
+        "is_done": true,
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 6,
         "title": "Clean workspace",
         "desc": "Organize desk and cables",
         "due_to": "06-02-2025",
-        "categories": ["🏡 personal", "📂 organization"],
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\ud83d\udcc2 organization"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T19:30:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 7,
         "title": "Team meeting",
         "desc": "Discuss project progress",
         "due_to": "04-02-2025",
-        "categories": ["💼 work", "📅 meetings"],
+        "categories": [
+            "\ud83d\udcbc work",
+            "\ud83d\udcc5 meetings"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T20:00:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 8,
         "title": "Grocery shopping",
         "desc": "Buy vegetables, milk, and eggs",
         "due_to": "02-02-2025",
-        "categories": ["🏡 personal", "🛒 shopping"],
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\ud83d\uded2 shopping"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T20:10:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 9,
         "title": "Fix broken chair",
         "desc": "Repair the wooden chair in the living room",
         "due_to": "11-02-2025",
-        "categories": ["🏡 personal", "🔧 maintenance"],
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\ud83d\udd27 maintenance"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T20:20:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     },
     {
         "id": 10,
         "title": "Book flight tickets",
         "desc": "Find and book flights for vacation",
         "due_to": "12-02-2025",
-        "categories": ["🏡 personal", "✈️ travel"],
+        "categories": [
+            "\ud83c\udfe1 personal",
+            "\u2708\ufe0f travel"
+        ],
         "is_done": false,
-        "created_at": "2025-02-02T20:30:00.000000"
+        "created_at": "2025-02-03T21:01:07.088777"
     }
 ]

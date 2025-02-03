@@ -44,10 +44,17 @@ class ToDoList:
 
     def get_task(self, task_nr):
         tasks_list = self.get_list()
-        for task in tasks_list:
+        for i, task in enumerate(tasks_list):
             if task["id"] == task_nr:
-                return task
+                return tasks_list[i]
         return {}
+
+    def get_task_index(self, task_nr):
+        tasks_list = self.get_list()
+        for i, task in enumerate(tasks_list):
+            if task["id"] == task_nr:
+                return i
+        return 0
 
     def add_item(self, item_data):
         todo_item = Task(item_data)
@@ -79,6 +86,3 @@ class ToDoList:
 
     def __iter__(self):
         return iter(self.todo_list)
-
-    def __repr__(self):
-        return self.get_list()
